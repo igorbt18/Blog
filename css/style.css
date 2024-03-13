@@ -1,0 +1,255 @@
+/* Reset de estilos para todos os elementos */
+* {
+  font-family: "Montserrat", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: 300;
+  font-style: normal;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* Estilos para o elemento html */
+html {
+  min-height: 100vh;
+  position: relative;
+}
+
+/* Estilos para a seção principal (main) */
+main {
+  margin-bottom: 250px;
+}
+
+/* Estilos para a barra de navegação (navbar) */
+#logo {
+  position: absolute;
+  top: 10px;
+  left: 1%;
+}
+
+#logo img {
+  width: 50px;
+}
+
+#navbar {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #161616;
+  padding: 20px;
+  text-transform: uppercase;
+  list-style: none;
+}
+
+#navbar li {
+  margin: 0 10px;
+  padding: 5px;
+}
+
+#navbar .nav-link {
+  color: #fff;
+  text-decoration: none;
+  transition: .5s;
+  font-size: 14px;
+}
+
+#navbar .nav-link:hover {
+  color: #999;
+}
+
+/* Estilos para a seção HOME */
+#title-container {
+  min-width: 500px;
+  text-align: center;
+  margin-top: 30px;
+}
+
+#title-container h1 {
+  font-size: 50px;
+}
+
+#title-container p {
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: #999;
+}
+
+#posts-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-top: 30px;
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.post-box:first-child {
+  min-width: 100%;
+}
+
+.post-box {
+  flex: 1 1 0;
+  margin-bottom: 20px;
+}
+
+.post-box:nth-child(3) {
+  margin: 0 1%;
+}
+
+.post-box img {
+  width: 100%;
+}
+
+.post-box .post-title {
+  font-size: 24px;
+  margin: 10px 0;
+}
+
+.post-box .post-title a {
+  color: black;
+  transition: .5s;
+}
+
+.post-box .post-title a:hover {
+  color: darkgray;
+}
+
+.post-box .post-description {
+  color: darkslategray;
+}
+
+.tags-container {
+  margin-top: 10px;
+}
+
+.tags-container a {
+  font-size: 16px;
+  color: #2F4F4F;
+  margin-right: 5px;
+  display: inline-block;
+}
+
+/* Estilos para a seção Posts */
+#post-container {
+  display: grid;
+  grid-template-columns: 75% 25%;
+  grid-template-rows: auto;
+  grid-template-areas: "main-sidebar";
+  grid-gap: 10px;
+  padding-top: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+  margin-bottom: 250px;
+}
+
+#main-title {
+  font-size: 40px;
+  margin-bottom: 35px;
+}
+
+#post-description {
+  font-style: italic;
+  margin-bottom: 40px;
+}
+
+#post-content {
+  line-height: 1.5;
+  margin: 10px 0;
+  max-width: 850px;
+}
+
+.img-container {
+  margin-bottom: 25px;
+}
+
+.img-container img {
+  width: 75%;
+}
+
+/* Barra lateral (Aside) dos Posts */
+.nav-container {
+  grid-area: sidebar;
+}
+
+#tags-title, #categories-title {
+  font-size: 24px;
+  margin-bottom: 10px;
+  background-color: black;
+  color: #fff;
+  text-align: center;
+  padding: 10px;
+  font-weight: 300;
+}
+
+.tag-list, #categories-list {
+  list-style: none;
+}
+
+.tag-list li, #categories-list li {
+  margin-bottom: 10px;
+}
+
+.tag-list a, #categories-list a {
+  color: #666;
+  transition: .5s;
+}
+
+.tag-list a:hover, #categories-list a:hover {
+  color: black;
+}
+
+/* Rodapé (Footer) */
+footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  text-align: center;
+  background-color: black;
+  color: #fff;
+  padding: 25px 0;
+}
+
+/* Estilos para dispositivos móveis com largura máxima de 500px */
+@media (max-width: 500px) {
+  /* Estilos para a seção HOME no modo mobile */
+  header {
+      width: 100%;
+  }
+
+  #logo {
+      display: block;
+      position: relative;
+      margin: 0 auto;
+      left: 0;
+      width: 50px;
+  }
+
+  #navbar {
+      display: none;
+  }
+
+  #title-container {
+      min-width: 100%;
+      margin-top: 20px;
+  }
+
+  #posts-container {
+      margin-top: 20px;
+  }
+
+  .post-box {
+      flex: 100% 1 0;
+      padding: 20px;
+      margin: 0;
+  }
+
+  /* Estilos para a seção Posts no modo mobile */
+  #post-container {
+      grid-template-columns: 100%;
+      padding: 15px;
+      grid-template-areas: "main" "sidebar";
+  }
+
+  .img-container img {
+      width: 100%;
+  }
+}
